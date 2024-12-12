@@ -1,0 +1,232 @@
+/* General Container Styling */
+.about-container {
+    display: flex;
+    flex-direction: column; /* Default column layout for smaller screens */
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    margin: 0;
+    background-color: #1a1a1a; /* Black background */
+    color: #d1d1d1; /* Light grey text color */
+    min-height: 85vh; /* Set to 85% of the viewport height */
+    width: 100%;
+    transition: background-color 0.3s ease;
+}
+
+/* Hover Effect on About Container */
+.about-container:hover {
+    background-color: #111; /* Slight darkening effect on hover */
+}
+
+/* About Me Section */
+.about-me-section {
+    width: 100%; /* Default width for small screens */
+    margin-bottom: 30px; /* More spacing between sections */
+    display: flex;
+    flex-direction: column; /* Stack elements vertically */
+    justify-content: center;
+    align-items: center; /* Align items to the start */
+    transition: color 0.3s ease; /* Padding inside the section */
+    margin-bottom: 0px;
+}
+
+.about-me-section:hover {
+    color: #00bcd4; /* Hover effect color */
+}
+
+.description-container{
+    text-align: left;
+    margin-bottom: 10px; /* More spacing between sections */
+    display: flex;
+    flex-direction: column; /* Stack elements vertically */
+    justify-content: center;
+    align-items: center; 
+}
+
+
+/* About Me Descriptions */
+.description-1{
+    font-size: 1.5rem; /* Slightly larger text */
+    margin-bottom:10px;
+    color: #747477; /* Light grey text */
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.6); 
+    transition: color 0.3s ease-in-out;
+    text-align: left;
+}
+.description-2 {
+    font-size: 1rem; /* Slightly larger text */
+    margin-bottom:0px;
+    color: #747477; /* Light grey text */
+    /* Light grey text */
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.6); 
+    transition: color 0.3s ease-in-out;
+    text-align: left;
+}
+
+.description-1:hover,
+.description-2:hover {
+    color: #91b1b2;;/* Hover effect color */
+    transform: translateY(-5px);
+}
+
+/* About Me Image */
+.about-image {
+    width: 200px; /* matches size: 200 */
+    height: 200px; /* matches size: 150 */
+    border-radius: 50%; /* matches border_radius: 10, 10, 10, 10 */
+    margin-bottom: 20px;
+}
+
+.about-image:hover{
+    transform: scale(1.1); /* Slight zoom */
+    border-color: #d5d9d9; /* Darker teal on hover */
+}
+
+
+.skills-section {
+    flex: 1;
+    width: 90%;
+    text-align: left;
+    margin-bottom: 30px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap; /* Allow items to wrap on smaller screens */
+    transition: color 0.3s ease;
+}
+
+.skills-list {
+    display: flex;
+    flex-wrap: wrap; 
+    justify-content: center;
+    align-items: center;
+    flex: 1 1 100px; /* Allow items to shrink or grow */
+    min-width: 100px;/* Items in the list will wrap when the screen size is smaller */
+}
+
+.skill-item {
+    display: flex;
+    flex-direction: column;
+    margin: 10px;
+    text-align: center;/* Prevent items from being too small */
+}
+
+
+
+.skill-item:hover{
+    color: #00bcd4; /* Hover effect color */
+    transform: translateY(-5px);
+}
+
+.skill-icon{
+    height: 30px;
+    width: 40px;
+}
+
+.html-icon {
+    color: orange; /* HTML Icon Color */
+}
+.css-icon {
+    color: blue; /* CSS Icon Color */
+}
+.javascript-icon {
+    color: yellow; /* JavaScript Icon Color */
+}
+.react-icon {
+    color: #61dafb; /* React Icon Color */
+}
+.figma-icon {
+    color: white; /* Figma Icon Color */
+}
+
+.node-icon{
+    color: green;
+}
+
+.mongo-icon{
+    color:green;
+}
+
+.skill-title{
+    font-size: 8px;
+}
+
+
+    /* Media Query for Larger Screens */
+@media (min-width: 768px) {
+    .about-me-section{
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-around;
+        width: 100%;
+    }
+
+    .description-container{
+        width: 60%;
+    }
+
+    .description-1{
+        font-size: 2.3rem;
+        width: 100%;
+    }
+    .description-2 {
+        font-size: 1.4rem; /* Larger font size */
+        width: 100%;
+    }
+
+    .about-image {
+        height: 350px;
+        width: 350px;
+        border-radius: 50%; /* Circular image */
+        margin: 20px; /* Add margin to the top */
+        object-fit: cover;
+    }
+
+.skills-section{
+    flex: 1;
+    width: 90%; /* Default width for small screens */
+    margin-bottom: 30px; /* More spacing between sections */
+    display: flex;
+    flex-direction: row; /* Stack elements vertically */
+    justify-content: center;
+    align-items: center; /* Align items to the start */
+    transition: color 0.3s ease; /* Padding inside the section */
+}
+
+.skills-title{
+    font-family: sans-serif;
+    font-size: 20px;
+}
+
+.skills-list{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.skill-item{
+    display: flex;
+    flex-direction: column;
+    margin: 10px;
+    align-items: center;
+    justify-content: center;
+}
+
+.skill-item:hover{
+    color: #00bcd4; /* Hover effect color */
+    transform: translateY(-5px);
+}
+
+.skill-icon{
+    height: 60px;
+    width: 80px;
+}
+
+.skill-title{
+    font-size: 12px;
+}
+}
+
+   

@@ -1,0 +1,119 @@
+/* Global Styles */
+.navbar {
+    display: flex;
+    flex-direction: row; /* Mobile first: stacked items */
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+    background-color: #000000;
+    color: white;
+    position: sticky;
+    top: 0;
+    height: 6vh;  /* Smaller height for mobile */
+    width: 100%;  /* Ensures navbar spans the full width */
+    box-sizing: border-box; /* Ensures padding is included in width */
+    box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.4); /* Subtle shadow for separation */
+}
+
+/* Tarun Icon Styling */
+.tarun-icon {
+    width: 30px;  
+    height: 30px;  
+    border-radius: 50%;
+    object-fit: cover;
+    margin-left: 25px;
+}
+    
+
+
+.tarun-icon:hover{
+    transform: translateY(-5px);
+}
+
+.header-icons{
+    width: 25px;  
+    height: 25px;  
+    border-radius: 50%;
+    object-fit: cover;
+    color: white;
+}
+
+.header-icons:hover{
+    color: #00bcd4;
+}
+
+/* Mobile Navbar List Styling */
+.ul-list-mobile {
+    list-style: none;
+    display: flex;
+    flex-direction: row; /* Stack list items horizontally on mobile */
+    gap: 10px;
+}
+
+/* Hide desktop list items on mobile */
+@media screen and (max-width :768px) {
+    .ul-list-desktop {
+        display: none;
+    }
+}
+
+/* List item styling */
+.list {
+    cursor: pointer;
+    transition: color 0.3s ease;
+    padding: 10px;
+    font-weight: 600;
+    color: #fff; /* Set list item text color to white */
+}
+
+.list:hover {
+    color: #00bcd4;  /* Change color on hover */
+}
+
+/* Large Screen (Above 768px) */
+@media (min-width: 768px) {
+    .navbar {
+        flex-direction: row; /* Align items horizontally */
+        justify-content: space-between;
+        height: 9vh;  /* Larger height for desktop */
+        align-items: center;
+    }
+
+    .ul-list-desktop {
+        gap: 20px;
+        list-style: none;
+        display: flex;
+        flex-direction: row; 
+        gap: 10px;
+    }
+
+    .ul-list-mobile {
+        display: none;
+    }
+
+    .tarun-icon {
+        width: 40px;  
+        height: 40px;  
+        border-radius: 50%;
+        object-fit: cover;
+        color: white;
+    }
+}
+
+/* Link Styling */
+.link {
+    text-decoration: none;
+}
+
+/* Body should have no margin to ensure full width */
+body {
+    margin: 0;  /* Ensure no extra space around the body */
+    padding: 0; /* Ensure no extra padding around the body */
+}
+
+/* Ensure parent container takes full width (optional for full screen layout) */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /* Include padding in width calculation */
+}

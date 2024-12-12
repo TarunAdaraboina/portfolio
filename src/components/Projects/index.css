@@ -1,0 +1,172 @@
+/* Main container for the project page */
+.projects-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  margin: 0;
+  background-color: #1a1a1a;
+  color: #d1d1d1;
+  height: 90vh;
+  width: 100%;
+  transition: background-color 0.3s ease;
+}
+
+.projects-container:hover {
+  background-color: #111;
+}
+
+/* Slick slider container */
+.slick-container {
+  width: 1100px;
+  height: 100%;
+  margin: 0 auto;
+}
+
+/* Slick slider item */
+.slick-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Center align items horizontally */
+  justify-content: center; /* Center align items vertically */
+  padding: 20px;
+  width: 90%;
+  max-width: 300px; /* Ensure consistent width for all items */
+  min-height: 400px; /* Set minimum height to equalize item height */
+  background-color: #1a1a1a;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  margin: 10px auto;
+}
+
+/* Hover effect for slick items */
+.slick-item:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* Logo image styling */
+.logo-image {
+  width: 100px;
+  height: 80px;
+  margin-bottom: 15px;
+  border-radius: 10px;
+  display: block; /* Ensure it's a block-level element */
+}
+
+/* Project Title styling */
+.project-title {
+  font-size: 1.2rem;
+  color: #747474;
+  font-weight: bold;
+  text-align: left;
+  margin-bottom: 10px;
+}
+
+.project-title:hover {
+  color: #0056b3;
+  transform: translateY(-5px);
+}
+
+/* Project Description styling */
+.project-description {
+  font-size: 0.9rem;
+  color: #747474;
+  margin-bottom: 15px;
+  max-width: 90%;
+  text-align: left;
+}
+
+.project-description:hover {
+  color: #0056b3;
+  transform: translateY(-5px);
+}
+
+/* Skills styling */
+.project-skills {
+  font-size: 0.85rem;
+  color: #b0b0b0;
+  margin-bottom: 15px;
+  text-align: left;
+}
+
+/* Repository link styling */
+.project-link {
+  font-size: 0.9rem;
+  color: #0073e6;
+  text-decoration: none;
+  font-weight: bold;
+  border: 1px solid #0073e6;
+  padding: 8px 12px;
+  border-radius: 5px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.project-link:hover {
+  background-color: #0056b3;
+  color: white;
+}
+
+/* Slick arrows customization */
+.slick-prev:before,
+.slick-next:before {
+  color: #0056b3;
+  font-size: 24px;
+}
+
+.slick-prev {
+  left: -50px;
+}
+
+.slick-next {
+  right: -50px;
+}
+
+/* Responsive adjustments for smaller screens */
+@media (max-width: 1024px) {
+  .slick-container {
+    width: 95%;
+  }
+
+  .slick-item {
+    width: 80%;
+  }
+
+  .project-title {
+    font-size: 1rem;
+  }
+
+  .project-description {
+    font-size: 0.85rem;
+  }
+
+  .project-link {
+    font-size: 0.85rem;
+  }
+}
+
+/* Mobile adjustments (below 768px) */
+@media (max-width: 768px) {
+  .slick-container {
+    width: 70%;
+  }
+
+  .slick-item {
+    width: 100%;
+  }
+
+  .project-title {
+    font-size: 1.1rem;
+  }
+
+  .project-description {
+    font-size: 0.9rem;
+  }
+
+  .project-link {
+    font-size: 0.9rem;
+  }
+}
