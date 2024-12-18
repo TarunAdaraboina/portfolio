@@ -22,7 +22,12 @@ function About() {
           <h1 className="description-1">
             I'm Tarun Adaraboina, a passionate Frontend Developer based in Hyderabad, Telangana.
           </h1>
-          <p className="description-2">"As a frontend developer, I specialize in creating dynamic web applications using HTML, CSS, and JavaScript. I build intuitive user interfaces with React, ensuring smooth and responsive designs. My expertise extends to backend development, where I utilize Node.js and MongoDB to create robust, scalable applications. With a keen focus on both frontend and backend, I work to deliver seamless experiences. My design approach is complemented by the use of CSS for styling, ensuring a polished, user-friendly interface. I'm always eager to expand my skills and explore the latest web technologies to improve user interaction and experience."\
+          <p className="description-2">"As a frontend developer, I specialize in creating dynamic web applications using HTML, CSS, and JavaScript. 
+              I build intuitive user interfaces with React, ensuring smooth and responsive designs. 
+              My expertise extends to backend development, where I utilize Node.js and MongoDB to create robust, scalable applications. 
+              With a keen focus on both frontend and backend, I work to deliver seamless experiences. 
+              My design approach is complemented by the use of CSS for styling, ensuring a polished, user-friendly interface. 
+              I'm always eager to expand my skills and explore the latest web technologies to improve user interaction and experience."
             </p>
             </div>
             <div>

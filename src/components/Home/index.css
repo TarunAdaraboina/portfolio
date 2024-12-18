@@ -56,6 +56,25 @@
 .description:hover {
   color: #0056b3;/* Bright white on hover *//* Bright white on hover */
 }
+.mail {
+  font-size: 1.2rem; /* Adjust font size */
+  color: #333; /* Set a dark color for the text */
+  font-weight: 500; /* Make the font a bit bolder */
+  margin-top: 20px; /* Add some space from the description */
+  text-align: center; /* Center the email */
+  transition: color 0.3s ease; /* Add a smooth transition for hover effect */
+}
+
+.mail:hover {
+  color: #0077b5; /* Change color on hover to a blue shade */
+  cursor: pointer; /* Change cursor to pointer to indicate it's clickable */
+}
+
+.mail a {
+  text-decoration: none; /* Remove underline from links */
+  color: inherit; /* Inherit the color from the parent element */
+}
+
 
 /* Profile Image Styling */
 .profile-image {

@@ -7,18 +7,18 @@
     padding: 20px;
     margin: 0;
     background-color: #1a1a1a;
-    min-height: 85vh;
     width: 100%;
+    height: 86vh;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     text-align: center;
 }
 
-.contact{
+.contact {
     color: #fff;
     font-size: 3rem;
 }
 
-.submit-message{
+.submit-message {
     font-family: sans-serif;
     font-size: 2.5rem;
     color: #fff;
@@ -32,15 +32,15 @@
 }
 
 .input-container label {
-    color:#747477;
+    color: #747477;
 }
 
 /* Input fields with hover effect */
-input[type="text"], input[type="email"] {
+input[type="text"], input[type="email"], textarea {
     width: 400px;
     padding: 10px;
     margin-bottom: 20px;
-    border: 4px solid #Fff;
+    border: 4px solid #fff;
     border-radius: 4px;
     font-size: 1rem;
     background-color: #fff;
@@ -48,22 +48,21 @@ input[type="text"], input[type="email"] {
 }
 
 /* Hover effect */
-input[type="text"]:hover, input[type="email"]:hover {
+input[type="text"]:hover, input[type="email"]:hover, textarea:hover {
     border-color: #d3d3d3;   /* Change border color on hover */
     box-shadow: 0 0 8px rgba(0, 123, 255, 0.5); /* Add subtle shadow effect */
 }
 
 /* Focus effect */
-input[type="text"]:focus, input[type="email"]:focus {
-    border-color:#d3d3d3;
+input[type="text"]:focus, input[type="email"]:focus, textarea:focus {
+    border-color: #d3d3d3;
     outline: none;
 }
-
 
 button {
     width: 200px;
     padding: 10px;
-    background-color:#d3d3d3;
+    background-color: #d3d3d3;
     color: #000;
     border: none;
     border-radius: 4px;
@@ -77,24 +76,68 @@ button:hover {
     background-color: #1a1a1a;
 }
 
+/* Direct Contact Section */
+.direct-contact {
+    font-size: 1.2rem;
+    color: #fff;
+    text-align: center;
+    margin-top: 20px;
+}
+
+.direct-contact a {
+    color: #0056b3; /* A blue color for the phone number link */
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.direct-contact a:hover {
+    text-decoration: underline; /* Underline on hover for better UX */
+}
+
+/* Location and Working Hours */
+.contact-location,
+.working-hours {
+    font-size: 1.2rem;
+    color: #fff;
+    text-align: center;
+    margin-top: 10px;
+}
+
+.contact-location a {
+    color: #0056b3;
+    text-decoration: none;
+}
+
+.contact-location a:hover {
+    text-decoration: underline;
+}
+
 /* Responsive design for mobile screens (max-width: 600px) */
 @media (max-width: 600px) {
     .form-container {
         padding: 15px;
+        height: 90vh;
     }
 
-    .contact{
+    .contact {
         color: #fff;
         font: 1.8rem sans-serif;
         margin-bottom: 20px;
     }
-    
 
-    input[type="text"], input[type="email"] {
+    .input-container {
+        width: 100%;
+    }
+
+    input[type="text"], input[type="email"], textarea {
         width: 100%; /* Input fields take full width on smaller screens */
     }
 
     button {
-        width: 10opx; /* Ensure button takes full width on mobile screens */
+        width: 100%; /* Ensure button takes full width on mobile screens */
+    }
+
+    .direct-contact {
+        font-size: 1rem; /* Slightly smaller text on mobile */
     }
 }

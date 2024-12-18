@@ -1,10 +1,6 @@
 import React, { Component } from "react";
-import Slider from "react-slick";
 import Header from "../Header";
 import Footer from "../Footer";
-
-import "slick-carousel/slick/slick.css";
-import "slick-carousel/slick/slick-theme.css";
 import "./index.css";
 
 const projectsData = [
@@ -90,62 +86,28 @@ const projectsData = [
   }
 ];
 
-const settings = {
-  dots: false,
-  infinite: true,
-  speed: 500,
-  slidesToShow: 4,
-  slidesToScroll: 1,
-  responsive: [
-    {
-      breakpoint: 1024,
-      settings: {
-        slidesToShow: 4,
-        slidesToScroll: 1
-      }
-    },
-    {
-      breakpoint: 600,
-      settings: {
-        slidesToShow: 3,
-        slidesToScroll: 1
-      }
-    },
-    {
-      breakpoint: 480,
-      settings: {
-        slidesToShow: 2,
-        slidesToScroll: 1
-      }
-    }
-  ]
-};
+
+
 
 class Projects extends Component {
-  renderSlider = () => {
-    return (
-      <Slider {...settings}>
-        {projectsData.map(({ id, title, description, skills, logo_url, repo_url }) => (
-          <div className="slick-item" key={id}>
-            <img className="logo-image" src={logo_url} alt={`${title} logo`} />
-            <h3 className="project-title">{title}</h3>
-            <p className="project-description">{description}</p>
-            <p className="project-skills"><strong>Skills Used:</strong> {skills}</p>
-            <a href={repo_url} target="_blank" rel="noopener noreferrer" className="project-link">
-              View Repository
-            </a>
-          </div>
-        ))}
-      </Slider>
-    );
-  };
-
   render() {
     return (
       <>
         <Header />
         <div className="projects-container">
-          <div className="slick-container">{this.renderSlider()}</div>
+          <ul className="projects-list">
+            {projectsData.map(({ id, title, description, skills, logo_url, repo_url }) => (
+              <li className="project-item" key={id}>
+                <img className="logo-image" src={logo_url} alt={`${title} logo`} />
+                <h3 className="project-title">{title}</h3>
+                <p className="project-description">{description}</p>
+                <p className="project-skills"><strong>Skills Used:</strong> {skills}</p>
+                <a href={repo_url} target="_blank" rel="noopener noreferrer" className="project-link">
+                  View
+                </a>
+              </li>
+            ))}
+          </ul>
         </div>
         <Footer />
       </>

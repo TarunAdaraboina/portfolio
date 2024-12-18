@@ -16,7 +16,10 @@ function Home() {
       <p className="description"> a passionate MERN Stack Developer focused on building responsive and dynamic web applications. With expertise in React, Node.js, and MongoDB, 
         I create user-centric solutions that solve real-world problems. Let's collaborate to bring your next project to life!
         </p>
-      <p className='description'>adaraboinatarun@gmail.com</p>
+        <p className='mail'>
+           <a href="mailto:adaraboinatarun@gmail.com">adaraboinatarun@gmail.com</a>
+        </p>
+
       <div className="social-icons-container">
       <a href="https://www.linkedin.com/in/tarunadaraboina/" target="_blank" rel="noopener noreferrer" className='social-links'>
         <FaLinkedin size={30}  />
