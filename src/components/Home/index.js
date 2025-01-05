@@ -14,10 +14,7 @@ function Home() {
     <div className='container'>
       <h1 className='title'>Hi, I'm Tarun</h1>
       <p className="description"> a passionate MERN Stack Developer focused on building responsive and dynamic web applications. With expertise in React, Node.js, and MongoDB, 
-        I create user-centric solutions that solve real-world problems. Let's collaborate to bring your next project to life!
-        </p>
-        <p className='mail'>
-           <a href="mailto:adaraboinatarun@gmail.com">adaraboinatarun@gmail.com</a>
+        I create user-centric solutions that solve real-world problems.
         </p>
 
       <div className="social-icons-container">

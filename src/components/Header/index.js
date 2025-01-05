@@ -16,11 +16,6 @@ function Header() {
             <FaHome className='header-icons' />
           </li>
         </Link>
-        <Link to="/about" className="link">
-          <li className="list">
-            <FaUserAlt className='header-icons' />
-          </li>
-        </Link>
         <Link to="/projects" className="link">
           <li className="list">
             <FaProjectDiagram className='header-icons' />
@@ -36,15 +31,17 @@ function Header() {
             <FaPhoneAlt className='header-icons' />
           </li>
         </Link>
+        <Link to="/about" className="link">
+          <li className="list">
+            <FaUserAlt className='header-icons' />
+          </li>
+        </Link>
       </ul>
 
       {/* Desktop Navigation */}
       <ul className="ul-list-desktop">
         <Link to="/" className="link">
           <li className="list">Home</li>
-        </Link>
-        <Link to="/about" className="link">
-          <li className="list">About</li>
         </Link>
         <Link to="/blog" className="link">
           <li className="list">Blog</li>
@@ -54,6 +51,9 @@ function Header() {
         </Link>
         <Link to="/contact" className="link">
           <li className="list">Contact</li>
+        </Link>
+        <Link to="/about" className="link">
+          <li className="list">About</li>
         </Link>
       </ul>
     </nav>
