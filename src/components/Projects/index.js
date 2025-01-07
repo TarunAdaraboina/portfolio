@@ -86,28 +86,40 @@ const projectsData = [
   }
 ];
 
-
-
-
 class Projects extends Component {
   render() {
     return (
       <>
         <Header />
         <div className="projects-container">
-          <ul className="projects-list">
-            {projectsData.map(({ id, title, description, skills, logo_url, repo_url }) => (
-              <li className="project-item" key={id}>
-                <img className="logo-image" src={logo_url} alt={`${title} logo`} />
-                <h3 className="project-title">{title}</h3>
-                <p className="project-description">{description}</p>
-                <p className="project-skills"><strong>Skills Used:</strong> {skills}</p>
-                <a href={repo_url} target="_blank" rel="noopener noreferrer" className="project-link">
-                  View
-                </a>
-              </li>
-            ))}
-          </ul>
+          {projectsData.map((project) => (
+            <div className="project-card" key={project.id}>
+              <div className="project-logo-container">
+                <img
+                  className="project-logo"
+                  src={project.logo_url}
+                  alt={project.title}
+                />
+              </div>
+              <div className="project-info">
+                <h3 className="project-title">{project.title}</h3>
+                <p className="project-description">{project.description}</p>
+                <p className="project-skills">
+                  <strong>Skills:</strong> {project.skills}
+                </p>
+                <div className="project-link-container">
+                  <a
+                    href={project.repo_url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="project-link"
+                  >
+                    View Project
+                  </a>
+                </div>
+              </div>
+            </div>
+          ))}
         </div>
         <Footer />
       </>
