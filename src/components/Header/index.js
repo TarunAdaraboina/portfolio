@@ -1,6 +1,9 @@
 import './index.css';
 import { Link } from 'react-router-dom';
-import { FaHome, FaUserAlt, FaProjectDiagram, FaPhoneAlt, FaBlog } from "react-icons/fa";
+import { FaHome, FaBlog } from "react-icons/fa";
+import { ImUserTie } from "react-icons/im";
+import { MdContactSupport } from "react-icons/md";
+import { GoProjectSymlink } from "react-icons/go";
 
 function Header() {
   return (
@@ -16,24 +19,24 @@ function Header() {
             <FaHome className='header-icons' />
           </li>
         </Link>
+        <Link to="/about" className="link">
+          <li className="list">
+            <ImUserTie className='header-icons' />
+          </li>
+        </Link>
         <Link to="/projects" className="link">
           <li className="list">
-            <FaProjectDiagram className='header-icons' />
+            <GoProjectSymlink className='header-icons' />
           </li>
         </Link>
         <Link to="/blog" className="link">
           <li className="list">
             <FaBlog className='header-icons' />
           </li>
-        </Link>
+          </Link>
         <Link to="/contact" className="link">
           <li className="list">
-            <FaPhoneAlt className='header-icons' />
-          </li>
-        </Link>
-        <Link to="/about" className="link">
-          <li className="list">
-            <FaUserAlt className='header-icons' />
+            <MdContactSupport className='header-icons' />
           </li>
         </Link>
       </ul>
@@ -43,6 +46,9 @@ function Header() {
         <Link to="/" className="link">
           <li className="list">Home</li>
         </Link>
+        <Link to="/about" className="link">
+          <li className="list">About</li>
+        </Link>
         <Link to="/blog" className="link">
           <li className="list">Blog</li>
         </Link>
@@ -51,9 +57,6 @@ function Header() {
         </Link>
         <Link to="/contact" className="link">
           <li className="list">Contact</li>
-        </Link>
-        <Link to="/about" className="link">
-          <li className="list">About</li>
         </Link>
       </ul>
     </nav>
