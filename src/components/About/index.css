@@ -70,7 +70,7 @@
 }
 
 .about-image:hover{
-    transform: scale(1.1); /* Slight zoom */
+    transform: scale(1); /* Slight zoom */
     border-color: #d5d9d9; /* Darker teal on hover */
 }
 
@@ -136,9 +136,14 @@
     color: green;
 }
 
+.sql-icon{
+    color: red;
+}
+
 .mongo-icon{
     color:green;
 }
+
 
 .skill-title{
     font-size: 8px;

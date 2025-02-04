@@ -12,12 +12,13 @@ function Home() {
     <Header/>
     <div className='home-container'>
     <div className='container'>
-      <h1 className='title'>Hi, I'm Tarun</h1>
+      <h1 className='title'>Hello, I'm Tarun</h1>
       <p className="description"> a passionate MERN Stack Developer focused on building responsive and dynamic web applications. With expertise in React, Node.js, and MongoDB, 
         I create user-centric solutions that solve real-world problems.
         </p>
 
-      <div className="social-icons-container">
+      <div className="social-icons-container"> 
+      <h1 className='connect'>Let's Connect :</h1>
       <a href="https://www.linkedin.com/in/tarunadaraboina/" target="_blank" rel="noopener noreferrer" className='social-links'>
         <FaLinkedin size={30}  />
       </a>

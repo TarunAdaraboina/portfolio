@@ -6,6 +6,7 @@ import { GrReactjs } from "react-icons/gr";
 import { FaFigma } from "react-icons/fa";
 import { IoLogoNodejs } from "react-icons/io5";
 import { DiMongodb } from "react-icons/di";
+import { GrMysql } from "react-icons/gr";
 
 import Header from '../Header';
 import Footer from '../Footer';
@@ -65,14 +66,16 @@ function About() {
       <p className="skill-title">NOde.Js</p>
     </li>
     <li className="skill-item">
+      <GrMysql className="skill-icon sql-icon" />
+      <p className="skill-title">SQL</p>
+    </li>
+    <li className="skill-item">
       <DiMongodb className="skill-icon mongo-icon" />
       <p className="skill-title">MongoDB</p>
     </li>
   </ul>
 </div>
-
-
-      </div>
+</div>
       <Footer />
     </>
   );
