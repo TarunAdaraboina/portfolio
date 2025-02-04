@@ -30,9 +30,6 @@
     margin-bottom: 0px;
 }
 
-.about-me-section:hover {
-    color: #00bcd4; /* Hover effect color */
-}
 
 .description-container{
     text-align: left;
@@ -63,11 +60,6 @@
     text-align: left;
 }
 
-.description-1:hover,
-.description-2:hover {
-    color: #91b1b2;;/* Hover effect color */
-    transform: translateY(-5px);
-}
 
 /* About Me Image */
 .about-image {
