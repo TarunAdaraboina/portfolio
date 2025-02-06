@@ -42,6 +42,9 @@
   font-size: 1.1rem;
   width: 100%;
   max-width: 700px;
+  white-space: nowrap; /* Prevents text wrapping */
+  overflow: hidden; /* Hides overflow text */
+  text-overflow: ellipsis; /* Adds "..." for overflowing text */
 }
 
 .contact-details a {
@@ -67,9 +70,10 @@
 
   .contact-details p {
     font-size: 1rem;
-    flex-direction: column;
+    flex-direction: row;
     align-items: center;
-    justify-content: center; /* Centers items on smaller screens */
+    justify-content: flex-start; /* Centers items on smaller screens */
+    white-space: nowrap; /* Prevents wrapping on medium screens */
   }
 }
 
@@ -84,7 +88,8 @@
 
   /* Additional responsiveness for contact details */
   .contact-details p {
-    font-size: 1rem;
-    width: 90%; /* Makes each contact item take more space */
+    font-size: 0.8rem;
+    width: 100%; /* Makes each contact item take more space */
+    white-space: nowrap; /* Prevents wrapping on small screens */
   }
 }
