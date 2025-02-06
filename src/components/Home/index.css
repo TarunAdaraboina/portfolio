@@ -1,148 +1,247 @@
-/* General Container Styling */
+/* Base styles */
 .home-container {
   display: flex;
-  align-items: center;
   flex-direction: column;
+  align-items: center;
   justify-content: flex-start;
-  gap: 20px;
+  gap: 10px;
   padding: 40px;
-  background-color: #1a1a1a; /* Dark grey background */ /* White text for contrast */
+  background-color: #1c1c1c;
   min-height: 90vh;
   width: 100%;
   transition: background-color 0.3s ease;
 }
 
-/* Hover Effect on About Container */
 .home-container:hover {
-    background-color: #111; /* Slight darkening effect on hover */
+  background-color: #111;
 }
 
-
-.container{
+.home-content {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
+  max-width: 800px;
 }
 
-/* Title Section */
 .title {
-  font-size: 1.5rem;
-  font-weight: 700;
-  color:#747477; /* Teal color for title */
-  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.6); /* Subtle text shadow */
-  margin-bottom: 15px;
-  font-family: 'Poppins', sans-serif;
-  transition: color 0.3s ease, transform 0.3s ease;
-  text-align: left;
-}
-
-/* Title Hover Effect */
-.title:hover {
-  color:  #0056b3; /* Darker teal on hover */
-  transform: translateY(-5px); /* Slight upward movement */
-}
-
-/* Description Section */
-.description {
   font-size: 1rem;
-  color: #747474;; /* Lighter grey text for description */
+  font-weight: 700;
+  color: transparent;
+  background: linear-gradient(90deg, #00bcd4, #0056b3);
+  -webkit-background-clip: text;
+  background-clip: text;
+  margin-bottom: 15px;
+  width: 100%;
+  text-align: left;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.description {
+  font-size: 0.85rem;
+  color: #e0e0e0;
   line-height: 1.8;
-  font-family: 'Roboto', sans-serif;
   transition: color 0.3s ease-in-out;
   text-align: left;
 }
 
-.mail {
-  font-size: 1.2rem; /* Adjust font size */
-  color: #333; /* Set a dark color for the text */
-  font-weight: 500; /* Make the font a bit bolder */
-  margin-top: 20px; /* Add some space from the description */
-  text-align: center; /* Center the email */
-  transition: color 0.3s ease; /* Add a smooth transition for hover effect */
+.bio {
+  font-size: 0.85rem;
+  color: #b3b3b3;
+  line-height: 1.8;
+  margin-top: 15px;
+  text-align: left;
+  transition: color 0.3s ease-in-out;
 }
 
-.mail:hover {
-  color: #0077b5; /* Change color on hover to a blue shade */
-  cursor: pointer; /* Change cursor to pointer to indicate it's clickable */
-}
-
-.mail a {
-  text-decoration: none; /* Remove underline from links */
-  color: inherit; /* Inherit the color from the parent element */
-}
-
-
-/* Profile Image Styling */
-.profile-image {
-  border-radius: 50%;
-  width: 220px;
-  height: 220px;
-  object-fit: cover;
-  border: 3px solid #808080; /* Teal border */
-  box-shadow:  15px rgba(215, 209, 209, 0.3);
-  transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
-}
-
-/* Profile Image Hover Effect */
-.profile-image:hover {
-  transform: scale(1.0); /* Slight zoom */
-  border-color: #023436;/* Darker teal on hover */
-  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.4); /* Deep shadow */
-}
-
-.social-icons-container{
+.social-icons-container {
   margin-top: 30px;
   display: flex;
   flex-direction: row;
-  justify-content: center;
   align-items: center;
+  gap: 15px;
 }
 
-.connect{
-  color: #ebe5e5;
-  font-size: 1.5rem;
-  color: #747474;; /* Lighter grey text for description */
-  line-height: 1.8;
-  font-family: 'Roboto', sans-serif;
+.connect {
+  font-size: 1.275rem;
+  color: #e0e0e0;
   transition: color 0.3s ease-in-out;
   text-align: left;
+  margin-right: 20px;
 }
 
 .social-links {
-  color: #747477; /* Set color */
-  margin: 15px;  /* Add spacing between icons */
-  transition: color 0.3s ease; /* Smooth color transition */
+  color: #e0e0e0;
+  transition: color 0.3s ease;
 }
 
 .social-links:hover {
-  color: #0056b3; /* Color change on hover */
+  color: #00bcd4;
 }
 
+.profile-image {
+  border-radius: 50%;
+  width: 187px;
+  height: 187px;
+  object-fit: cover;
+  border: 3px solid #808080;
+  box-shadow: 0 0 15px rgba(215, 209, 209, 0.3);
+  transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+}
 
-/* Media Queries for Responsiveness */
-@media (min-width: 768px) {
-  .home-container{
-    display: flex;
+.profile-image:hover {
+  transform: scale(1.0);
+  border-color: #023436;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.4);
+}
+
+/* Small screens (max-width: 600px) */
+@media (max-width: 600px) {
+  .home-container {
+    padding: 20px;
+  }
+
+  .home-content {
+    align-items: center;
+    text-align: center;
+    width: 100%;
+  }
+
+  .title {
+    font-size: 1.5rem;
+    font-weight: 500;
+  }
+
+  .description {
+    font-size: 1.00rem;
+    color: #fff;
+  }
+
+  .bio {
+    font-size: 1rem;
+    margin-top: 10px;
+  }
+
+  .connect {
+    font-size: 1.1rem;
+  }
+
+  .social-icons-container {
+    flex-direction: row;
+    gap: 10px;
+  }
+
+  .profile-image {
+    width: 170px;
+    height: 170px;
+    margin-top: 60px;
+  }
+}
+
+/* Medium screens (min-width: 601px and max-width: 768px) */
+@media (min-width: 601px) and (max-width: 768px) {
+  .home-container {
+    padding: 30px;
+  }
+
+  .home-content {
     align-items: flex-start;
+    width: 80%;
+  }
+
+  .title {
+    font-size: 1.87rem;
+  }
+
+  .description {
+    font-size: 1.19rem;
+    color: #fff;
+  }
+
+  .bio {
+    font-size: 1.02rem;
+    margin-top: 12px;
+  }
+
+  .connect {
+    font-size: 1.19rem;
+  }
+
+  .profile-image {
+    width: 213px;
+    height: 213px;
+    margin-top: 30px;
+  }
+}
+
+/* Large screens (min-width: 768px and max-width: 1024px, for iPad Mini portrait mode) */
+@media (min-width: 768px) and (max-width: 1024px) {
+  .home-container {
     flex-direction: row;
     justify-content: space-around;
+    align-items: flex-start;
+    padding: 40px;
+    gap: 10%;
   }
-  .container {
-    flex-direction: column;
-    justify-content: center;
+
+  .home-content {
     width: 60%;
   }
 
   .title {
-    font-size: 3.5rem;
+    font-size: 2rem;
   }
 
   .description {
-    font-size: 1.7rem;
+    font-size: 1.445rem;
+    color: #fff;
+  }
+
+  .bio {
+    font-size: 1.105rem;
   }
 
   .profile-image {
-    width: 350px;
-    height: 370px;
+    width: 297px;
+    height: 314px;
+  }
+}
+
+/* Extra large screens (min-width: 1200px) */
+@media (min-width: 1200px) {
+  .home-container {
+    padding: 30px;
+    gap: 30px;
+    justify-content: center;
+    align-self: center;
+    flex-direction: row;
+  }
+
+  .home-content {
+    width: 50%;
+  }
+
+  .title {
+    font-size: 2.9rem;
+    width: 100%;
+  }
+
+  .description {
+    font-size: 1.53rem;
+  }
+
+  .bio {
+    font-size: 1.275rem;
+    margin-top: 17px;
+  }
+
+  .connect {
+    font-size: 1.36rem;
+  }
+
+  .profile-image {
+    width: 340px;
+    height: 357px;
   }
 }

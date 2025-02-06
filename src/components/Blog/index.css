@@ -1,87 +1,81 @@
+/* Blog Page Styling */
 .blog-section {
-  padding: 20px 0;
-  background-color: #1a1a1a;
+  width: 100%;
+  min-height: 100vh;
+  background: linear-gradient(135deg, #1a1a1a, #232323);
   display: flex;
   justify-content: center;
   align-items: center;
-  flex-direction: column;
-  height: 95vh;
+  padding: 20px;
 }
 
 .blog-timeline-container {
-  width: 90%;
-  max-width: 1200px;
+  width: 100%;
+  max-width: 1400px;
+  padding: 30px;
   background-color: #1a1a1a;
-  padding: 20px;
   border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   overflow-y: auto;
-  max-height: calc(100vh - 160px);
 }
 
 .chrono-card {
-  background-color: #fff;
+  background-color: #2a2a2a;
   padding: 20px;
   margin-bottom: 20px;
   border-radius: 8px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
+  color: #f1f1f1;
 }
 
 .chrono-card:hover {
   transform: translateY(-5px);
-  box-shadow: 0 8px 12px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 8px 12px rgba(0, 0, 0, 0.3);
 }
 
 .blog-excerpt {
-  font-size: 1rem;
-  color: #333;
+  font-size: 1.1rem;
+  color: #343030;
   margin-bottom: 10px;
-  display: -webkit-box;
-  -webkit-box-orient: vertical;
-  overflow: hidden;
 }
 
 .blog-link {
   font-weight: bold;
-  color: #0056b3;
+  color: #4da6ff;
   text-decoration: none;
   transition: color 0.3s ease;
 }
 
 .blog-link:hover {
-  color: #ff8a00;
-}
-
-.chrono-logo {
-  width: 50px;
-  height: 50px;
-  border-radius: 50%;
-  margin-bottom: 15px;
+  color: #f59e0b;
 }
 
 .chrono-card .cardSubtitle {
-  font-size: 1.1rem;
-  color: #555;
+  font-size: 1rem;
+  color: #aaaaaa;
 }
 
 /* Responsive Styles */
+@media (max-width: 1024px) {
+  .blog-section {
+    padding: 15px;
+  }
+  .blog-timeline-container {
+    padding: 20px;
+  }
+}
+
 @media (max-width: 768px) {
   .blog-timeline-container {
     width: 95%;
-    padding: 10px;
+    padding: 15px;
   }
-
   .chrono-card {
     padding: 15px;
   }
-
   .blog-excerpt {
-    font-size: 0.9rem;
-  }
-
-  .chrono-logo {
-    width: 40px;
-    height: 40px;
+    font-size: 1rem;
   }
 }
 
@@ -90,17 +84,10 @@
     width: 100%;
     padding: 10px;
   }
-
   .chrono-card {
-    padding: 10px;
+    padding: 12px;
   }
-
   .blog-excerpt {
-    font-size: 0.8rem;
-  }
-
-  .chrono-logo {
-    width: 35px;
-    height: 35px;
+    font-size: 0.9rem;
   }
 }

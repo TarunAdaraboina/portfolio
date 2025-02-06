@@ -1,8 +1,7 @@
 import React from 'react';
 import Header from '../Header';
 import Footer from '../Footer';
-import { FaPhoneAlt } from "react-icons/fa";
-
+import { FaPhoneAlt, FaEnvelope, FaLinkedin, FaGithub } from "react-icons/fa";
 import './index.css';
 
 function Contact() {
@@ -10,13 +9,16 @@ function Contact() {
     <>
       <Header />
       <div className="contact-container">
-        <h1 className='contact-title'> Let's collaborate to bring your next project to life!</h1>
-        <div className='contact-cont'>
-        <p className='direct-contact'>Contact Me directly: <FaPhoneAlt /> <a href="tel:+9059124937">9059124937</a></p>
-        <p className='contact-email'>Email Me at: <a href="mailto:adaraboinatarun@gmail.com">adaraboinatarun@gmail.com</a></p>
-        <p className="contact-location">
-          Visit us at: <a href="https://www.google.com/maps" target="_blank" rel="noopener noreferrer"> Sanjay Nagar, Kothagudem, Telangana, India 507101</a>
+        <h1 className='contact-title'>Let's Connect!</h1>
+        <p className="contact-description">
+          I'm always open to new opportunities and collaborations. Feel free to reach out to me via email or LinkedIn, or check out my GitHub for more projects.
         </p>
+
+        <div className='contact-details'>
+          <p className='direct-contact'><FaPhoneAlt /> Phone : <a href="tel:+919059124937">+91 9059124937</a></p>
+          <p className='contact-email'><FaEnvelope /> Email : <a href="mailto:adaraboinatarun@gmail.com">adaraboinatarun@gmail.com</a></p>
+          <p className='contact-linkedin'><FaLinkedin /> LinkedIn : <a href="https://www.linkedin.com/in/tarunadaraboina" target="_blank" rel="noopener noreferrer">linkedin.com/in/tarunadaraboina</a></p>
+          <p className='contact-github'><FaGithub /> GitHub : <a href="https://github.com/TarunAdaraboina" target="_blank" rel="noopener noreferrer">github.com/TarunAdaraboina</a></p>
         </div>
       </div>
       <Footer />

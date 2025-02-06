@@ -1,229 +1,190 @@
 /* General Container Styling */
 .about-container {
-    display: flex;
-    flex-direction: column; /* Default column layout for smaller screens */
-    align-items: center;
-    justify-content: center;
-    padding: 20px;
-    margin: 0;
-    background-color: #1a1a1a; /* Black background */
-    color: #d1d1d1; /* Light grey text color */
-    min-height: 85vh; /* Set to 85% of the viewport height */
-    width: 100%;
-    transition: background-color 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start; /* Align content to the start of the container */
+  align-items: flex-start; /* Align content to the left */
+  padding: 40px 20px;
+  background-color: #1a1a1a;
+  color: #d1d1d1;
+  min-height: 85vh;
+  width: 100%;
+  text-align: left; /* Align text to the left */
 }
 
-/* Hover Effect on About Container */
-.about-container:hover {
-    background-color: #111; /* Slight darkening effect on hover */
+.about-me,
+.education,
+.skills {
+  width: 100%; /* Ensure sections take up full width */
+  max-width: 100%; /* Remove the max-width restriction */
+  margin-bottom: 30px;
 }
 
-/* About Me Section */
-.about-me-section {
-    width: 100%; /* Default width for small screens */
-    margin-bottom: 30px; /* More spacing between sections */
-    display: flex;
-    flex-direction: column; /* Stack elements vertically */
-    justify-content: center;
-    align-items: center; /* Align items to the start */
-    transition: color 0.3s ease; /* Padding inside the section */
-    margin-bottom: 0px;
+.about-title {
+  font-size: 2.5rem;
+  margin-bottom: 3px;
+  color: #ffffff;
+  font-weight: 700;
 }
 
-
-.description-container{
-    text-align: left;
-    margin-bottom: 10px; /* More spacing between sections */
-    display: flex;
-    flex-direction: column; /* Stack elements vertically */
-    justify-content: center;
-    align-items: center; 
+.about-description {
+  font-size: 1.2rem;
+  line-height: 1.6;
+  color: #b0b0b0;
 }
 
-
-/* About Me Descriptions */
-.description-1{
-    font-size: 1.5rem; /* Slightly larger text */
-    margin-bottom:10px;
-    color: #747477; /* Light grey text */
-    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.6); 
-    transition: color 0.3s ease-in-out;
-    text-align: left;
-}
-.description-2 {
-    font-size: 1rem; /* Slightly larger text */
-    margin-bottom:0px;
-    color: #747477; /* Light grey text */
-    /* Light grey text */
-    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.6); 
-    transition: color 0.3s ease-in-out;
-    text-align: left;
+/* Education and Skills Sections */
+.skills-title,
+.education-title {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #ffffff;
+  margin-bottom: 3px;
 }
 
-
-/* About Me Image */
-.about-image {
-    width: 200px; /* matches size: 200 */
-    height: 200px; /* matches size: 150 */
-    border-radius: 50%; /* matches border_radius: 10, 10, 10, 10 */
-    margin-bottom: 20px;
-}
-
-.about-image:hover{
-    transform: scale(1); /* Slight zoom */
-    border-color: #d5d9d9; /* Darker teal on hover */
-}
-
-
-.skills-section {
-    flex: 1;
-    width: 90%;
-    text-align: left;
-    margin-bottom: 30px;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap; /* Allow items to wrap on smaller screens */
-    transition: color 0.3s ease;
-}
-
+.education-list,
 .skills-list {
-    display: flex;
-    flex-wrap: wrap; 
-    justify-content: center;
-    align-items: center;
-    flex: 1 1 100px; /* Allow items to shrink or grow */
-    min-width: 100px;/* Items in the list will wrap when the screen size is smaller */
+  list-style: none;
+  padding: 0;
+  margin-top: 10px;
+}
+
+.education-item,
+.skill-item {
+  font-size: 1.1rem;
+  color: #d1d1d1;
+  margin: 8px 0;
+}
+
+/* Skills Section - Display skills in a row */
+.skills-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
 }
 
 .skill-item {
-    display: flex;
+  font-size: 1.1rem;
+  color: #d1d1d1;
+  margin: 0;
+}
+
+/* Education Section - Column Layout */
+.education-list {
+  display: flex;
+  flex-direction: column; /* Display items in a column */
+  gap: 10px; /* Add space between items */
+}
+
+.education-item {
+  font-size: 1.1rem;
+  color: #d1d1d1;
+  margin:  0;
+}
+
+/* Download Button */
+.download {
+  margin-top: 10px; 
+  margin-bottom: 50px;
+}
+
+.download-btn {
+  background-color: #4caf50;
+  color: white;
+  font-size: 1.2rem;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  text-decoration: none;
+  display: inline-block; /* Make button inline-block for proper alignment */
+  margin: 0 auto; /* Center the button */
+}
+
+.download-btn:hover {
+  background-color: #45a049;
+}
+
+/* Media Queries */
+
+/* For Mobile */
+@media (max-width: 768px) {
+  .about-container {
     flex-direction: column;
-    margin: 10px;
-    text-align: center;/* Prevent items from being too small */
+    align-items: flex-start; /* Align to the start of the container */
+    padding: 20px; /* Reduce padding on mobile */
+    height: 90vh;
+  }
+
+  .about-title {
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-bottom: 5px;
+  }
+
+  .about-description {
+    font-size: 0.7rem;
+    margin-bottom: 10px;
+  }
+
+  .about-me,
+.education,
+.skills {
+  width: 100%; /* Ensure sections take up full width */
+  max-width: 100%; /* Remove the max-width restriction */
+  margin-bottom: 5px;
 }
 
+  .skills-title,
+  .education-title {
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-top: 3px;
+    margin-bottom: 5px;
+  }
 
+  .education-item,
+  .skill-item {
+    font-size: 0.7rem;
+    margin-bottom: 5px;
+  }
 
-.skill-item:hover{
-    color: #00bcd4; /* Hover effect color */
-    transform: translateY(-5px);
+  .download-btn {
+    font-size: 1rem;
+    width: 100%; /* Make the button full-width on mobile */
+  }
 }
 
-.skill-icon{
-    height: 30px;
-    width: 40px;
-}
-
-.html-icon {
-    color: orange; /* HTML Icon Color */
-}
-.css-icon {
-    color: blue; /* CSS Icon Color */
-}
-.javascript-icon {
-    color: yellow; /* JavaScript Icon Color */
-}
-.react-icon {
-    color: #61dafb; /* React Icon Color */
-}
-.figma-icon {
-    color: white; /* Figma Icon Color */
-}
-
-.node-icon{
-    color: green;
-}
-
-.sql-icon{
-    color: red;
-}
-
-.mongo-icon{
-    color:green;
-}
-
-
-.skill-title{
-    font-size: 8px;
-}
-
-
-    /* Media Query for Larger Screens */
+/* For Larger Screens */
 @media (min-width: 768px) {
-    .about-me-section{
-        flex-direction: row;
-        align-items: center;
-        justify-content: space-around;
-        width: 100%;
-    }
-
-    .description-container{
-        width: 60%;
-    }
-
-    .description-1{
-        font-size: 2.3rem;
-        width: 100%;
-    }
-    .description-2 {
-        font-size: 1.4rem; /* Larger font size */
-        width: 100%;
-    }
-
-    .about-image {
-        height: 350px;
-        width: 350px;
-        border-radius: 50%; /* Circular image */
-        margin: 20px; /* Add margin to the top */
-        object-fit: cover;
-    }
-
-.skills-section{
-    flex: 1;
-    width: 90%; /* Default width for small screens */
-    margin-bottom: 30px; /* More spacing between sections */
-    display: flex;
-    flex-direction: row; /* Stack elements vertically */
-    justify-content: center;
-    align-items: center; /* Align items to the start */
-    transition: color 0.3s ease; /* Padding inside the section */
-}
-
-.skills-title{
-    font-family: sans-serif;
-    font-size: 20px;
-}
-
-.skills-list{
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
-}
-
-.skill-item{
-    display: flex;
+  .about-container {
     flex-direction: column;
-    margin: 10px;
-    align-items: center;
-    justify-content: center;
+    align-items: flex-start; /* Align to the start of the container */
+  }
+
+  .about-me, .skills, .education {
+    width: 100%;
+    margin-bottom: 40px;
+  }
+
+  .about-title,
+  .skills-title,
+  .education-title {
+    text-align: left; /* Align titles to the left */
+  }
+
+  .download-btn {
+    font-size: 1.2rem;
+  }
 }
 
-.skill-item:hover{
-    color: #00bcd4; /* Hover effect color */
-    transform: translateY(-5px);
+/* Skills Section Hover Effect */
+.skill-item:hover {
+  transform: translateY(-10px);
+  color: #00bcd4;
 }
 
-.skill-icon{
-    height: 60px;
-    width: 80px;
+.skill-name {
+  font-size: 1.1rem;
+  color: #d1d1d1;
 }
-
-.skill-title{
-    font-size: 12px;
-}
-}
-
-   

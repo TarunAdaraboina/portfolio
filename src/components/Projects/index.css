@@ -1,11 +1,22 @@
+/* Ensures full height for the main container */
+.main-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh; /* Ensure content pushes the footer to the bottom */
+}
+
+/* Styling for the projects container */
 .projects-container {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
   gap: 20px;
-  padding: 20px;
+  padding: 40px;
+  padding-bottom: 70px;
   background-color: #070606;
+  flex-grow: 1; /* Allow this section to grow and take up space */
 }
 
+/* Styling for each project card */
 .project-card {
   background-color: #1f1f1f;
   color: #e0e0e0;
@@ -14,24 +25,12 @@
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: flex-start;
 }
 
-.project-logo-container {
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  margin-bottom: 15px;
-}
-
-.project-logo {
-  max-width: 100%;
-  height: auto;
-  border-radius: 5px;
-}
-
+/* Styling for project info section */
 .project-info {
-  text-align: center;
+  text-align: left;
 }
 
 .project-title {
@@ -50,9 +49,11 @@
   margin-bottom: 15px;
 }
 
+/* Styling for links in the project card */
 .project-link-container {
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
+  gap: 5px;
 }
 
 .project-link {
@@ -65,8 +66,39 @@
   text-decoration: underline;
 }
 
+/* Media Queries for responsive design */
+
+/* For large screens */
+@media (min-width: 1024px) {
+  .projects-container {
+    grid-template-columns: repeat(2, 1fr); /* 2 projects per row */
+  }
+}
+
+/* For small screens */
 @media (max-width: 768px) {
   .projects-container {
-    grid-template-columns: 1fr;
+    grid-template-columns: 1fr; /* 1 project per column */
   }
+
+  .project-card {
+    padding: 15px; /* Reduce padding on small screens */
+  }
+
+  .project-title {
+    font-size: 1.2rem; /* Adjust font size for smaller screens */
+  }
+
+  .project-description {
+    font-size: 0.9rem; /* Adjust font size for smaller screens */
+  }
+}
+
+/* Footer Styling */
+.footer {
+  background-color: #030303;
+  color: #e0e0e0;
+  padding: 20px;
+  text-align: center;
+  margin-top: 30px; /* Push footer to the bottom */
 }

@@ -5,6 +5,7 @@ import About from './components/About'; // About component
 import Projects from './components/Projects'; // Projects component
 import Contact from './components/Contact';
 import Blog from './components/Blog'
+import "./App.css"
 
 function App() {
   return (

@@ -6,83 +6,66 @@ import "./index.css";
 const projectsData = [
   {
     id: "1",
-    title: "Book Hub",
+    title: "Book Hub (Goodreads Clone)",
     description:
-      "An online platform to explore and review top-rated books, featuring seamless navigation and a responsive design. Users can browse personalized recommendations, ratings, and reviews.",
-    skills: "React, JavaScript, CSS, REST APIs, Responsive Design",
+      "A modern platform for book enthusiasts to manage their reading lists. Built with React, Bootstrap, and client storage for secure authentication.",
+    skills: "React, JavaScript, CSS, REST APIs, Responsive Design, Cookies",
     logo_url:
       "https://res.cloudinary.com/dvtvfpqeo/image/upload/v1733834169/bookhubjpeg_bbshtd.jpg",
-    repo_url: "https://github.com/TarunAdaraboina/project_bookHub.git"
+    repo_url: "https://github.com/TarunAdaraboina/project_bookHub.git",
+    view_live: "https://bookhub1411.ccbp.tech/login",
   },
   {
     id: "2",
-    title: "Nxt Trendz",
+    title: "Nxt Trendz (E-Commerce Clone)",
     description:
-      "An e-commerce platform showcasing the latest trends in fashion with authentication, search functionality, and secure transactions. Features include a shopping cart and user account management.",
-    skills: "React, Node.js, MongoDB, Authentication, CSS, REST APIs",
+      "An Amazon/Flipkart-inspired e-commerce platform with secure authentication using JWT tokens and REST API calls.",
+    skills: "React, Node.js, MongoDB, Authentication, CSS, REST APIs, Cookies",
     logo_url:
       "https://res.cloudinary.com/dvtvfpqeo/image/upload/v1733834267/images_qi74hc.png",
-    repo_url: "https://github.com/TarunAdaraboina/nxttrendz.git"
+    repo_url: "https://github.com/TarunAdaraboina/nxttrendz.git",
+    view_live: "https://tarun1411.ccbp.tech/login",
   },
   {
     id: "3",
-    title: "User Management App",
+    title: "Jobby App (Finding Jobs)",
     description:
-      "A simple web app to manage user data with add, edit, and delete operations. Features include search, filter, and sort for user records, ensuring smooth management of user profiles.",
-    skills: "React, JavaScript, JSONPlaceholder API, CSS",
+      "A comprehensive job search solution with protected routes, JWT authentication, and REST API integration.",
+    skills: "React, Node.js, CSS, MongoDB, JWT Authentication, REST APIs, Cookies",
     logo_url:
-      "https://res.cloudinary.com/dvtvfpqeo/image/upload/v1733833893/usermanagement_nb1cca.png",
-    repo_url: "https://github.com/TarunAdaraboina/user_managament_app.git"
+      "https://res.cloudinary.com/dvtvfpqeo/image/upload/v1733833869/jobby_n8xpv8.png",
+    repo_url: "https://github.com/TarunAdaraboina/JobbyApp.git",
+    view_live: "https://jobsprojectmern.ccbp.tech/login",
   },
   {
     id: "4",
-    title: "IPL Dashboard",
+    title: "Worlde Clone (Word guessing game)",
     description:
-      "A dashboard for IPL stats and match details with interactive charts and filters. Users can filter by season, team, or player to view real-time scores, player stats, and rankings.",
-    skills: "React, D3.js, JavaScript, CSS, REST APIs",
+      "A Wordle-like game where users guess a 5-letter word in 6 attempts, with color-coded feedback.",
+    skills: "React, CSS, JavaScript, React.Js",
     logo_url:
-      "https://res.cloudinary.com/dvtvfpqeo/image/upload/v1733833877/Tata_IPL_Logo_azcbgd.webp",
-    repo_url: "https://github.com/TarunAdaraboina/IPL-Dashboard.git"
+      "https://res.cloudinary.com/dvtvfpqeo/image/upload/v1733833869/jobby_n8xpv8.png",
+    repo_url: "https://github.com/TarunAdaraboina/world-clone",
+    view_live: "https://world-clone.vercel.app/",
   },
   {
     id: "5",
-    title: "Jobby App",
+    title: "Calculator (Mathematical Operator)",
     description:
-      "A job-search app with advanced filters, authentication, and a personalized dashboard for job applications. Users can browse job listings, save jobs, and track their application status.",
-    skills: "React, Node.js, CSS, MongoDB, JWT Authentication, REST APIs",
+      "A simple yet functional calculator application allowing basic arithmetic operations with a clean and responsive design.",
+    skills: "React, CSS, JavaScript, React.Js",
     logo_url:
       "https://res.cloudinary.com/dvtvfpqeo/image/upload/v1733833869/jobby_n8xpv8.png",
-    repo_url: "https://github.com/TarunAdaraboina/JobbyApp.git"
+    repo_url: "https://github.com/TarunAdaraboina/calculator",
+    view_live: "https://calculator-pink-sigma.vercel.app/",
   },
   {
     id: "6",
-    title: "Todos Application",
-    description:
-      "A task management app to add, edit, and delete tasks with deadlines. Users can organize tasks into categories and track progress with real-time updates and notifications for overdue tasks.",
-    skills: "React, JavaScript, CSS, Local Storage, Bootstrap",
-    logo_url:
-      "https://res.cloudinary.com/dvtvfpqeo/image/upload/v1733833859/todopng_pkecki.png",
-    repo_url: "https://github.com/TarunAdaraboina/TodosApplication.git"
-  },
-  {
-    id: "7",
-    title: "Movie Database",
-    description:
-      "A movie database where users can search and browse movies, view details like genres, ratings, and trailers, and create personalized watchlists for easy access to their favorite films.",
-    skills: "React, JavaScript, CSS, REST APIs, Redux",
-    logo_url:
-      "https://res.cloudinary.com/dvtvfpqeo/image/upload/v1733833851/WPDM-The-Movie-Database_f9m3ui.png",
-    repo_url: "https://github.com/TarunAdaraboina/Movie-Database.git"
-  },
-  {
-    id: "8",
-    title: "Restaurant Website",
-    description:
-      "A responsive restaurant website with detailed menus, reservation system, and reviews. Users can browse the menu, place orders, book tables, and submit reviews for a seamless dining experience.",
-    skills: "HTML, CSS, JavaScript, Bootstrap, Responsive Design",
-    logo_url:
-      "https://res.cloudinary.com/dvtvfpqeo/image/upload/v1733833843/restaurant-cafe-vector-logo-menu-dish-food-or-chef-icon-FXHPX8_snvscl.jpg",
-    repo_url: "https://github.com/TarunAdaraboina/Restaurant.git"
+    title: "User Management Dashboard",
+    description: "A full-featured user management dashboard with CRUD operations, user authentication, and dynamic data handling.",
+    skills: "React, Node.js, MongoDB, JWT Authentication, CSS, REST APIs, Responsive Design",
+    repo_url: "https://github.com/TarunAdaraboina/user-management-dashboard",
+    view_live: "https://user-management-dashboard-blush.vercel.app/",
   }
 ];
 
@@ -94,13 +77,6 @@ class Projects extends Component {
         <div className="projects-container">
           {projectsData.map((project) => (
             <div className="project-card" key={project.id}>
-              <div className="project-logo-container">
-                <img
-                  className="project-logo"
-                  src={project.logo_url}
-                  alt={project.title}
-                />
-              </div>
               <div className="project-info">
                 <h3 className="project-title">{project.title}</h3>
                 <p className="project-description">{project.description}</p>
@@ -109,12 +85,21 @@ class Projects extends Component {
                 </p>
                 <div className="project-link-container">
                   <a
+                    href={project.view_live}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="project-link"
+                  >
+                    View Live Demo
+                  </a>
+                  <span> | </span>
+                  <a
                     href={project.repo_url}
                     target="_blank"
                     rel="noopener noreferrer"
                     className="project-link"
                   >
-                    View Project
+                    GitHub Repo
                   </a>
                 </div>
               </div>
