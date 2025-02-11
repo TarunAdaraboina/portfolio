@@ -20,7 +20,7 @@ const Home = () => {
             Let's build something amazing together!
           </p>
           <div className="social-icons-container">
-            <h2 className="connect">Let's Connect:</h2>
+            <h3 className="connect">Let's Connect :</h3>
             <a
               href="https://www.linkedin.com/in/tarunadaraboina/"
               target="_blank"

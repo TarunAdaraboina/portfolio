@@ -1,4 +1,4 @@
-/* Base styles */
+/* Base styles for Home component */
 .home-container {
   display: flex;
   flex-direction: column;
@@ -23,6 +23,7 @@
   max-width: 800px;
 }
 
+/* Title Style */
 .title {
   font-size: 1rem;
   font-weight: 700;
@@ -38,14 +39,17 @@
   text-overflow: ellipsis;
 }
 
+/* Updated Description Style */
 .description {
-  font-size: 0.85rem;
-  color: #e0e0e0;
-  line-height: 1.8;
+  font-size: 1rem;
+  color: #ffffff;
+  line-height: 1.6;
   transition: color 0.3s ease-in-out;
   text-align: left;
+  margin-bottom: 15px;
 }
 
+/* Bio Style */
 .bio {
   font-size: 0.85rem;
   color: #b3b3b3;
@@ -55,6 +59,7 @@
   transition: color 0.3s ease-in-out;
 }
 
+/* Social Icons Container */
 .social-icons-container {
   margin-top: 30px;
   display: flex;
@@ -80,6 +85,7 @@
   color: #00bcd4;
 }
 
+/* Profile Image */
 .profile-image {
   border-radius: 50%;
   width: 187px;
@@ -96,42 +102,44 @@
   box-shadow: 0 5px 20px rgba(0, 0, 0, 0.4);
 }
 
+/* Media Queries */
+
 /* Small screens (max-width: 600px) */
 @media (max-width: 600px) {
   .home-container {
     padding: 20px;
   }
-
+  
   .home-content {
     align-items: center;
     text-align: center;
     width: 100%;
   }
-
+  
   .title {
     font-size: 1.5rem;
     font-weight: 500;
   }
-
+  
   .description {
-    font-size: 1.00rem;
+    font-size: 1rem;
     color: #fff;
   }
-
+  
   .bio {
     font-size: 1rem;
     margin-top: 10px;
   }
-
+  
   .connect {
     font-size: 1.1rem;
   }
-
+  
   .social-icons-container {
     flex-direction: row;
     gap: 10px;
   }
-
+  
   .profile-image {
     width: 170px;
     height: 170px;
@@ -144,30 +152,30 @@
   .home-container {
     padding: 30px;
   }
-
+  
   .home-content {
     align-items: flex-start;
     width: 80%;
   }
-
+  
   .title {
     font-size: 1.87rem;
   }
-
+  
   .description {
-    font-size: 1.19rem;
+    font-size: 1rem;
     color: #fff;
   }
-
+  
   .bio {
     font-size: 1.02rem;
     margin-top: 12px;
   }
-
+  
   .connect {
     font-size: 1.19rem;
   }
-
+  
   .profile-image {
     width: 213px;
     height: 213px;
@@ -175,7 +183,7 @@
   }
 }
 
-/* Large screens (min-width: 768px and max-width: 1024px, for iPad Mini portrait mode) */
+/* Large screens (min-width: 768px and max-width: 1024px) */
 @media (min-width: 768px) and (max-width: 1024px) {
   .home-container {
     flex-direction: row;
@@ -184,24 +192,24 @@
     padding: 40px;
     gap: 10%;
   }
-
+  
   .home-content {
     width: 60%;
   }
-
+  
   .title {
     font-size: 2rem;
   }
-
+  
   .description {
-    font-size: 1.445rem;
+    font-size: 1rem;
     color: #fff;
   }
-
+  
   .bio {
     font-size: 1.105rem;
   }
-
+  
   .profile-image {
     width: 297px;
     height: 314px;
@@ -217,29 +225,30 @@
     align-self: center;
     flex-direction: row;
   }
-
+  
   .home-content {
     width: 50%;
   }
-
+  
   .title {
     font-size: 2.9rem;
     width: 100%;
   }
-
+  
   .description {
-    font-size: 1.53rem;
+    font-size: 1.2rem;
+    font-style: italic;
   }
-
+  
   .bio {
     font-size: 1.275rem;
     margin-top: 17px;
   }
-
+  
   .connect {
     font-size: 1.36rem;
   }
-
+  
   .profile-image {
     width: 340px;
     height: 357px;

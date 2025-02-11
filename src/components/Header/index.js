@@ -1,46 +1,30 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './index.css';
 import { Link } from 'react-router-dom';
-import { FaHome, FaBlog } from "react-icons/fa";
-import { ImUserTie } from "react-icons/im";
-import { MdContactSupport } from "react-icons/md";
-import { GoProjectSymlink } from "react-icons/go";
+import {  FaBars, FaTimes } from "react-icons/fa";
+
 
 const Header = () => {
+  const [menuOpen, setMenuOpen] = useState(false);
+
+  const toggleMenu = () => {
+    setMenuOpen(prev => !prev);
+  };
+
+  const closeMenu = () => {
+    setMenuOpen(false);
+  };
+
   return (
     <nav className="navbar" aria-label="Main Navigation">
       <Link to="/" className="logo-link" aria-label="Home">
-        <h1 className="tarun-icon" >TA</h1>
+        <h1 className="tarun-icon">TA</h1>
       </Link>
-      
-      {/* Mobile Navigation */}
-      <ul className="nav-list-mobile">
-        <li className="nav-item">
-          <Link to="/" className="link" aria-label="Home">
-            <FaHome className="header-icon" />
-          </Link>
-        </li>
-        <li className="nav-item">
-          <Link to="/about" className="link" aria-label="About">
-            <ImUserTie className="header-icon" />
-          </Link>
-        </li>
-        <li className="nav-item">
-          <Link to="/projects" className="link" aria-label="Projects">
-            <GoProjectSymlink className="header-icon" />
-          </Link>
-        </li>
-        <li className="nav-item">
-          <Link to="/blog" className="link" aria-label="Blog">
-            <FaBlog className="header-icon" />
-          </Link>
-        </li>
-        <li className="nav-item">
-          <Link to="/contact" className="link" aria-label="Contact">
-            <MdContactSupport className="header-icon" />
-          </Link>
-        </li>
-      </ul>
+
+      {/* Mobile Hamburger Icon */}
+      <div className="mobile-menu-icon" onClick={toggleMenu} aria-label="Menu">
+        {menuOpen ? <FaTimes className="header-icon" /> : <FaBars className="header-icon" />}
+      </div>
 
       {/* Desktop Navigation */}
       <ul className="nav-list-desktop">
@@ -60,6 +44,27 @@ const Header = () => {
           <Link to="/contact" className="link">Contact</Link>
         </li>
       </ul>
+
+      {/* Mobile Navigation Dropdown */}
+      {menuOpen && (
+        <ul className="nav-list-mobile">
+          <li className="nav-item" onClick={closeMenu}>
+            <Link to="/" className="link">Home</Link>
+          </li>
+          <li className="nav-item" onClick={closeMenu}>
+            <Link to="/about" className="link">About</Link>
+          </li>
+          <li className="nav-item" onClick={closeMenu}>
+            <Link to="/projects" className="link">Projects</Link>
+          </li>
+          <li className="nav-item" onClick={closeMenu}>
+            <Link to="/blog" className="link">Blog</Link>
+          </li>
+          <li className="nav-item" onClick={closeMenu}>
+            <Link to="/contact" className="link">Contact</Link>
+          </li>
+        </ul>
+      )}
     </nav>
   );
 };

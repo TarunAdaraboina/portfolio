@@ -1,10 +1,70 @@
-import React from 'react';
+import React from 'react'; 
 import Header from '../Header';
 import Footer from '../Footer';
+import { Chart } from 'primereact/chart';
 
 import './index.css';
 
 function About() {
+  // Data for the skills chart
+  const data = {
+    labels: ['HTML', 'CSS', 'JAVASCRIPT', 'PYTHON', 'SQL', 'NODEJS', 'REACTJS'],
+    datasets: [
+      {
+        label: 'Proficiency (%)',
+        data: [95, 90, 80, 40, 60, 70, 85],
+        backgroundColor: [
+          '#00bcd4',
+          '#00bcd4',
+          '#00bcd4',
+          '#00bcd4',
+          '#00bcd4',
+          '#00bcd4'
+        ],
+        borderColor: [
+          '#0056b3',
+          '#0056b3',
+          '#0056b3',
+          '#0056b3',
+          '#0056b3',
+          '#0056b3'
+        ],
+        borderWidth: 1
+      }
+    ]
+  };
+
+  const options = {
+    maintainAspectRatio: false,
+    scales: {
+      y: {
+        beginAtZero: true,
+        max: 100,
+        ticks: {
+          color: '#d1d1d1'
+        },
+        grid: {
+          color: 'rgba(255, 255, 255, 0.2)'
+        }
+      },
+      x: {
+        ticks: {
+          color: '#d1d1d1'
+        },
+        grid: {
+          display: false
+        }
+      }
+    },
+    plugins: {
+      legend: {
+        labels: {
+          color: '#d1d1d1'
+        }
+      }
+    }
+  };
+
   return (
     <>
       <Header />
@@ -41,7 +101,9 @@ function About() {
 
         <section className="skills">
           <h2 className="skills-title">Skills</h2>
-          <p>HTML, CSS, SQL, PYTHON, JAVASCRIPT, NODEJS, REACTJS</p>
+          <div className="chart-container">
+            <Chart type="bar" data={data} options={options} />
+          </div>
         </section>
 
         <section className="download">
