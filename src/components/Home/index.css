@@ -47,6 +47,7 @@
   transition: color 0.3s ease-in-out;
   text-align: left;
   margin-bottom: 15px;
+  font-style: italic;
 }
 
 /* Bio Style */
