@@ -6,7 +6,7 @@
   justify-content: flex-start;
   gap: 10px;
   padding: 40px;
-  background-color: #1c1c1c;
+  background: linear-gradient(to right, #040404, #111);
   min-height: 90vh;
   width: 100%;
   transition: background-color 0.3s ease;
@@ -53,7 +53,7 @@
 /* Bio Style */
 .bio {
   font-size: 0.85rem;
-  color: #b3b3b3;
+  color: #ffffff;
   line-height: 1.8;
   margin-top: 15px;
   text-align: left;
@@ -124,7 +124,7 @@
   
   .description {
     font-size: 1rem;
-    color: #fff;
+    color:  #ffffff;
   }
   
   .bio {
