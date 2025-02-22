@@ -1,7 +1,7 @@
 /* Contact Page Styling */
 .contact-container {
   padding: 4rem 2rem;
-  background-color: #1a1a1a;
+  background-color: #000;
   color: #f1f1f1;
   font-family: 'Arial', sans-serif;
   min-height: 90vh;
@@ -130,4 +130,8 @@
   .contact-item a {
     font-size: 0.9rem;
   }
+  .contact-image {
+    max-width: 200px;
+  }
+
 }

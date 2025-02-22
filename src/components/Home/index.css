@@ -5,15 +5,11 @@
   justify-content: flex-start;
   gap: 10px;
   padding: 40px;
-  background-color: #1a1a1a;
+  background-color: #111;
   min-height: 90vh;
   width: 100%;
-  transition: background-color 0.3s ease;
 }
 
-.home-container:hover {
-  background-color: #111;
-}
 
 .home-content {
   display: flex;
@@ -27,7 +23,7 @@
   font-size: 1rem;
   font-weight: 700;
   color: transparent;
-  background: linear-gradient(90deg, #00bcd4, #0056b3);
+  background: linear-gradient(90deg,  #8bb5e8,  #4590ec, #186df4);
   -webkit-background-clip: text;
   background-clip: text;
   margin-bottom: 10px;
